@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokazywanie ukrytego tekstu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#showText").click(function(){
+                $("#hiddenText").toggle();
+                // .hide() - ukrywa
+                // .show() - pokazuje
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="hiddenText" style="display:none;">
+    To jest ukryty tekst, który stanie się widoczny po kliknięciu przycisku.
+</div>
+<button id="showText">Pokaż tekst</button>
+
+</body>
+</html>

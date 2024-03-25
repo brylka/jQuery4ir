@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie elementów do listy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#addButton").click(function(){
+                var itemText = $("#textInput").val();
+                if(itemText) {
+                    $("#theList").append("<li>" + itemText + "</li>");
+                    $("#textInput").val("");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<input type="text" id="textInput" placeholder="Wpisz tekst">
+<button id="addButton">Dodaj</button>
+<ol id="theList"></ol>
+
+</body>
+</html>

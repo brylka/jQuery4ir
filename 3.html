@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle CSS Class</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .highlight {
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#toggleClassButton").click(function(){
+                $("#elementToToggle").toggleClass("highlight");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="elementToToggle">Przełącz moje tło!</div>
+<button id="toggleClassButton">Przełącz klasę</button>
+
+</body>
+</html>

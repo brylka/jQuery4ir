@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Znikające elementy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#removeFirst").click(function(){
+                $("li:first").fadeOut();
+                //$("li:first").remove();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<ul>
+    <li>Element 1</li>
+    <li>Element 2</li>
+    <li>Element 3</li>
+    <li>Element 4</li>
+</ul>
+<button id="removeFirst">Usuń pierwszy element</button>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana Koloru Tła</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="colorfulElement" style="width: 100px; height: 100px; background-color: grey; margin-bottom: 10px;"></div>
+<button id="changeColorButton">Zmień Kolor Tła</button>
+
+<script>
+    $(document).ready(function(){
+        $("#changeColorButton").click(function(){
+            var colors = ["red", "green", "blue", "yellow", "pink"];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            $("#colorfulElement").css("background-color", randomColor);
+        });
+    });
+</script>
+
+</body>
+</html>

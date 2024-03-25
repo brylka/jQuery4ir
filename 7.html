@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana rozmiaru tekstu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#increase").click(function(){
+                var currentSize = parseInt($("#text").css("font-size"));
+                var newSize = currentSize + 2;
+                $("#text").css("font-size", newSize + "px");
+            });
+
+            $("#decrease").click(function(){
+                var currentSize = parseInt($("#text").css("font-size"));
+                var newSize = currentSize - 2;
+                $("#text").css("font-size", newSize + "px");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p id="text">Ten tekst zmieni swój rozmiar po kliknięciu odpowiedniego przycisku.</p>
+<button id="increase">Zwiększ rozmiar tekstu</button>
+<button id="decrease">Zmniejsz rozmiar tekstu</button>
+
+</body>
+</html>

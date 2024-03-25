@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator dodawania</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                var number1 = parseFloat($("#number1").val());
+                var number2 = parseFloat($("#number2").val());
+                var sum = number1 + number2;
+                $("#result").text("Suma: " + number1 + " + " + number2 + " = " + sum);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<form>
+    <label for="number1">Liczba 1:</label>
+    <input type="number" id="number1">
+    <label for="number2">Liczba 2:</label>
+    <input type="number" id="number2">
+    <button type="button" id="add">Dodaj</button>
+</form>
+<div id="result"></div>
+
+</body>
+</html>

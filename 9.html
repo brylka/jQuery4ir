@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Licznik znaków w polu tekstowym</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#textInput").on("input", function(){
+                var charCount = $(this).val().length;
+                $("#charCount").text("Liczba znaków: " + charCount);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<label for="textInput">Wpisz tekst:</label>
+<input type="text" id="textInput" name="textInput">
+<div id="charCount">Liczba znaków: 0</div>
+
+</body>
+</html>
