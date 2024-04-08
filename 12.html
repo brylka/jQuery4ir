@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprawdzanie zawartości formularza</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#textInput").on("input", function(){
+                if ($(this).val() === "") {
+                    $("#message").text("Pole nie może być puste");
+                } else {
+                    $("#message").text("");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<form>
+    <label for="textInput">Pole tekstowe:</label>
+    <input type="text" id="textInput" name="textInput">
+    <div id="message" style="color: red;"></div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana koloru tekstu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hoverText").hover(
+                function() { // Funkcja wywoływana przy najechaniu myszką
+                    $(this).css("color", "red");
+                    alert("Najechałeś myszką")
+                },
+                function() { // Funkcja wywoływana przy odjechaniu myszką
+                    $(this).css("color", "black");
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+
+<p id="hoverText">Najedź na mnie myszką, aby zmienić mój kolor.</p>
+
+</body>
+</html>

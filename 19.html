@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana stylu elementów</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#changeStyleButton").click(function(){
+                var randomSize = Math.floor(10+Math.random()*40);
+                var randomRed = Math.floor(Math.random()*255);
+                var randomGreen = Math.floor(Math.random()*255);
+                var randomBlue = Math.floor(Math.random()*255);
+                $(".styleMe").css({
+                    "background-color": "rgb("+randomRed+","+randomGreen+","+randomBlue+")",
+                    "font-size": randomSize+"px"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button id="changeStyleButton">Zmień styl elementów</button>
+
+<div class="styleMe">Element 1</div>
+<div class="styleMe">Element 2</div>
+<p class="styleMe">Paragraf 1</p>
+
+</body>
+</html>

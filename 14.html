@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie elementów do listy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#addButton").click(function(event){
+                event.preventDefault(); // Zapobiega odświeżeniu strony
+                var itemText = $("#textField").val();
+
+                if(itemText !== "") {
+                    $("#itemList").append("<li>" + itemText + "</li>");
+                    $("#textField").val("");
+                } else {
+                    alert("Pole nie może być puste!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="textField" placeholder="Wpisz coś...">
+    <button id="addButton">Dodaj</button>
+</form>
+
+<ul id="itemList">
+    <!-- Tu będą dodawane nowe elementy -->
+</ul>
+
+</body>
+</html>

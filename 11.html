@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana tekstu przycisku</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#changeTextButton").click(function(){
+                $(this).text("Kliknięto!");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button id="changeTextButton">Kliknij mnie</button>
+
+</body>
+</html>

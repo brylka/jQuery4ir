@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Animacja elementów</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#animateButton").click(function(){
+                $("#animatedElement")
+                    .animate({left: '+=100px', top: '+=100px'}, "slow")
+                    .animate({top: '+=100px'}, "slow")
+                    .animate({height: '+=50px', width: '+=50px'}, "slow");
+            });
+        });
+    </script>
+    <style>
+        #animatedElement {
+            position: relative; /* Konieczne dla animacji pozycjonowania */
+            background-color: #f0f0f0;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="animateButton">Animuj element</button>
+<div id="animatedElement"></div>
+
+</body>
+</html>
